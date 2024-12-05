@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
-def function_view(request):
-    return render(request, 'func_template.html')
+# Create your views here.
+
+class Class_view(TemplateView):
+    template_name = 'second_task/class_template.html'
 
 
-class ClassView(TemplateView):
-    template_name = 'class_template.html'
+def func_view(request):
+    return render(request, 'second_task/func_template.html')
